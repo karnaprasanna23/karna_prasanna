@@ -1,0 +1,36 @@
+print("---------------( + to - )-------------")
+a = [1, 2, 3]
+for i in range(len(a)):
+    if i % 2 !=0:    # non-negative for odd
+        a[i] = -a[i]
+print(a)
+
+print("----------difference with 3----------")
+for i in range(0,50,3):
+    print(i)
+    
+print("--------append grades for scores----------")    
+s = [75, 99, 63, 32, 84]   
+g = []
+for i in s:
+    if i>90:
+       g.append("A") 
+    elif  80<i<=90:
+        g.append("B")
+    elif 70<i<=80:
+        g.append("C")
+    else:
+        g.append("D")
+print(g)
+print(sum(s)) #print sum of scores and tell is it pass or fail
+m = sum(s)
+if (m>300):
+    print("pass")
+else:
+    print("Fail")
+    
+    
+    
+    
+    
+    

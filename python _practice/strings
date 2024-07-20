@@ -1,0 +1,155 @@
+print("---------s.split()-----------")
+s ="prasanna kumari"
+s = s.split()  # it splits where space contain
+print(s)
+
+print("----------("".join())-----------")
+
+s = "prasanna", "kumari"
+s = "".join(s)   # it joins two strings as single string
+print(s)
+
+print("--------s.replace()----------")
+
+s = "abcd"
+s = s.replace("a", "d")   # it replaces "a" as "d" 
+print(s)
+
+print("-----------s.lower()----------")
+
+s = "PRASANNA KUMARI"
+s = s.lower()   # it changes upper case to lower()
+print(s)
+
+print("------------s.upper()-----------")
+
+s = "prasanna kumari"
+s = s.upper()   # it changes lower case to upper()
+print(s)
+
+print("------------remove spaces-------------")
+
+s = "how r u"
+print(s.split())  
+
+print("".join(s))
+
+print(s.replace(" ",""))
+
+print(s.replace("r","p"))
+
+print(s.replace(" ", ""))
+
+
+print("------------ n.isalpha() ------------------")
+
+n = "2, 3, g, 5, s"
+n = n.isalpha()  # it prints false because  if "n" contains integers 
+print(n)
+
+print("---------------- n.isalnum() ----------------")
+
+n = "123jnisdjf"
+n = n.isalnum()  # it contains both alphabets and numerical values ; isalnum is a alphanumeric
+print(n)
+
+
+print("---replace S in P -------")
+
+l = ["Sreelekha", "Sanathosh", "dhanu"]
+l2 = []
+for i in l:
+    if i[0] == "S":
+        l2.append(i.replace("S","P"))  # if the start letter is S then replace and append to l2
+    else:
+        l2.append(i)    # if the start letter is not S then append directly to l2
+print(l2)
+
+
+for i in range(len(l)):   # another method
+    if l[i][0] == "S":
+        l[i] = l[i].replace("S","P")
+print(l)
+
+
+print("--------panagram---------------")
+s = "The quick brown fox jumps over the lazy dog".lower()
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+for i in alphabet:
+    if i not in s:
+        print(" not a panagram")
+        break
+else:
+    print("panagram")
+    
+
+print("----------palindrome numbers----------")   
+
+for i in range(1, 101):
+    if str(i) == str(i)[::-1]:
+        print("palindrome",i)
+    else:
+        print("not",i)
+ 
+print("------------------ palindrome without using slicing -------------------")
+        
+for i in range(1, 50):
+    if str(i) == "".join(reversed(str(i))):
+        print("palindrome",i)
+    else:
+        print("not")
+            
+print("-------------- even palindromes -------------")
+            
+for i in range(1, 101):
+    if str(i) == str(i)[::-1]:
+        if i % 2 == 0:
+            print("palindrome",i)
+        else:
+            print("not",i)
+            
+            
+print("--------------anagram & nagaram----------------") 
+
+s1 = "silent"
+s2 = "listen"
+d1 = {}
+d2 = {}  
+for i in s1:
+    if i not in d1:
+        d1[i] = 1
+    else:
+        d1[i]+= 1
+for i in s2:
+    if i not in d2:
+        d2[i] = 2
+    else:
+        d2[i]+= 2
+if d1==d2:
+    print("anagram")
+else:
+    print("not") 
+            
+            
+s1 = "rise"
+s2 = "ires"
+if Count(s1) == Count(s2):
+    print("anagram")
+else:
+    print("not")    
+
+
+
+
+
+s = "aaabbccdddd"
+s1 = {}
+for i in s:
+    if i not in s1:
+        s1[i] = 1
+    else:
+        s1[i]+= 1
+s = ""   
+for i in s1:
+    s = s+i+str(s1[i])
+print(s)

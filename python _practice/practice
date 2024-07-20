@@ -1,0 +1,65 @@
+l = ["1,2,3,1,3,1,2,2,1,1,1,3"]
+d = {}
+p = 0
+for i in l:
+    if i not in d:
+        d[i] = 1
+    else:
+        d[i] += 1
+for i in d:
+    
+    p += d[i]//2
+    
+print(p)
+        
+l = [1,2,3,1,3,1,2,2,1,1,1,3]
+s = set()
+c = 0
+for i in l:
+    if i not in s:
+       s.add(i)
+       
+    else:
+       c+=1
+       s.remove(i) 
+print(c)
+
+
+s = "9654321768"
+s2 =""
+for i in range(len(s)):
+    if i % 2 == 0:
+       m = 9-int(s[i])   # subtract odd place num and 9
+       s2 +=str(m)
+    else:
+        s2 +=s[i]
+print(s2)
+
+
+s = "8569 3195 0383 3437"
+s = s.replace(" ", "")
+sum = 0
+for i in range(len(s)):
+    if i% 2==0:
+        d = 2*int(s[i])
+        if d>9:
+            d= d-9
+        else:
+            sum+=d
+    else:
+        sum +=int(s[i])
+if sum%10 ==10:
+    print("valid")
+else:
+    print("invalid")
+
+
+n  = int(input())
+count = 0
+while(n>1):
+    if n % 2 == 0:
+        n = n//2
+    else:
+        n=n*3+1
+    count+=1
+print(count)
